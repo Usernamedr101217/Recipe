@@ -223,6 +223,21 @@ input:focus {
     outline: none;
 }
 
+.loading {
+  display: none;
+  position: absolute;
+  top: 28%;
+  left: 35%;
+  background-color: none;
+  transition: 0.2s;
+}
+
+.loading img {
+  width: 400px;
+  height: 400px;
+}
+
+
 
 /*recipe list*/
 .recipe-list {
@@ -272,7 +287,7 @@ input:focus {
     background: none;
     border: none;
     border-radius: 5px;
-    color: #b1a500;
+    color: #7da8f0;
     padding: 4px;
     cursor: pointer;
     box-shadow: 0 0 5px 1px rgba(30, 30, 30, 0.51);

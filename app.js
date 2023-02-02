@@ -8,8 +8,6 @@ const dark = document.querySelector('.dark');
 const country = document.querySelector('.country');
 const container = document.querySelector('.recipe-container');
 
-let searchQuery = "";
-
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     searchQuery = e.target.querySelector('input').value;
@@ -19,9 +17,11 @@ form.addEventListener("submit", (e) => {
 
 
 async function fetchData() {
+    document.querySelector(".loading").style.display = "block";
     const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${searchQuery}&app_id=fbff24b6&app_key=7e9144a510bf236d86ecc1d50f5c5dc3`
     const res = await fetch(url);
     const data = await res.json();
+    document.querySelector(".loading").style.display = "none";
     showData(data.hits);
     console.log(data);
 }
