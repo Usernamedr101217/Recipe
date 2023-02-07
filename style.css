@@ -318,5 +318,20 @@ a {
     grid-template-columns: auto;
     gap: 3em;
   }
+  .recipe-container {
+    width: 16em;
+  }
+  .recipe-container > img {
+    width: 16em;
+  }
+
+  .loading {
+    top: 40%;
+    left: 20%;
+  }
+  .loading img {
+    width: 250px;
+    height: 250px;
+  }
 
 }
